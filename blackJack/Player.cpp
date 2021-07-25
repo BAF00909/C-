@@ -10,7 +10,7 @@ bool Player::isHitting() {
 	else return false;
 };
 void Player::win() const {
-	cout << name << " выиграл!" << endl;
+	cout << name << " выиграл!" <<endl;
 };
 void Player::lose() const {
 	cout << name << " проиграл!" << endl;

@@ -5,7 +5,33 @@ using namespace std;
 #include "Hand.h"
 #include "Player.h"
 #include "House.h"
+#include "Deck.h"
+#include "Game.h"
+#include <cstdlib>
 
+
+void blackJackMain() {
+
+    srand(time(0));
+
+    string pl1 = "Alex";
+    string pl2 = "Ann";
+    vector<string> players;
+    players.push_back(pl1);
+    players.push_back(pl2);
+
+    Game game(players);
+
+    char again = 'y';
+    while(again != 'n' && again != 'N')
+    {
+        game.play();
+        cout << "\n Сыграете еще раз? (Y/N): \n";
+        cin >> again;
+    }
+
+
+}
 
 
 
@@ -13,19 +39,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    Card spadesAce(Card::valueCard::ACE, Card::cardSuit::SPADES, false);
-    spadesAce.flip();
-    cout << spadesAce << endl;
-
-    Card* sa = &spadesAce;
-
-    Player pl("Alexandr");
-    pl.add(sa);
-    cout << pl.getValue() << endl;
-
-    House dil("Diller");
-    dil.add(sa);
-    cout << dil.getValue() << endl;
+    blackJackMain();
 
     return 0;
 }

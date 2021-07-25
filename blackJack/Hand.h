@@ -7,8 +7,9 @@ using namespace std;
 class Hand
 {
 protected:
-	vector<Card*> cards;
+
 public:
+	vector<Card*> cards;
 	void add(Card * card);
 	void clear();
 	int getValue();

@@ -10,3 +10,7 @@ bool GenericPlayer::isBoosted() {
 void GenericPlayer::bust()const {
 	cout << name << " перебор";
 };
+
+string GenericPlayer::getName() {
+	return name;
+};
