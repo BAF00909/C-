@@ -21,7 +21,7 @@ public:
 		KING = 10,
 	};
 	enum class cardSuit {
-		SPADES,   // пики
+		SPADES = 0,   // пики
 		HEARDS,   // червы
 		DIAMONDS, // бубны
 		CLUBS     // трефы

@@ -10,4 +10,5 @@ public:
 	virtual bool isHitting() = 0;
 	bool isBoosted();
 	void bust()const;
+	string getName();
 };

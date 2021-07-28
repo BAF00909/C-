@@ -7,11 +7,14 @@ void Hand::add(Card* card)
 
 void Hand::clear()
 {
-	for (auto const& card : cards)
+	vector<Card*>::iterator iter = cards.begin();
+	for (iter = cards.begin(); iter != cards.end(); ++iter)
 	{
-		delete card;
+		delete* iter;
+		*iter = 0;
 	}
-	delete[] &cards;
+
+	cards.clear();
 }
 
 int Hand::getValue()
@@ -21,8 +24,9 @@ int Hand::getValue()
 	for (auto const* card : cards) {
 		if (int(card->getValue()) == 1 && valSum <= 21) {
 			valSum += 11;
-		}
-		else {
+		} 
+		else 
+		{
 			valSum += int(card->getValue());
 		}
 	}
