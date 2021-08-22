@@ -14,6 +14,8 @@ int main()
     int* ptr1 = new int(1);
     int* ptr2 = new int(2);
     Swap(ptr1, ptr2);
+    delete ptr1;
+    delete ptr2;
 
     std::cout << "\n Task 2: " << std::endl;
 
